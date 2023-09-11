@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+}
+
+body{
+    background-image: url(https://nordicapis.com/wp-content/uploads/How-to-Build-an-API-Driven-Weather-App-1024x576.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Jost", sans-serif;
+}
+
+html{
+    font-size: 100%;
+    height: 100%;
+}
+
+html{
+    background: #eee;
+}
+
+.box{
+    width: 50vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+
+.box:after{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate(0,0,0);
+}
+
+.info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    z-index: 4;
+}
+
+.location{
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+
+@keyframes rotates{
+    from{
+        transform: translateX(-1rem);
+    }to{
+        transform: translateX(0rem);
+    }
+}
+
+.temp{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.con{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tempmin_max{
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #57606f;
+}
+
+body > span{
+    width: 100vw;
+    text-align: center;
+    color: grey;
+}
+
+.inputData{
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputFeild{
+    width: 50%;
+    margin: auto;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.errorMsg{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
